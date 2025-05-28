@@ -3,3 +3,66 @@ title: "doc"
 format: html
 ---
 
+```{r}
+
+#| message: false
+# Read in packages
+library(tidyverse)
+library(janitor)
+library(here)
+library(gt)
+library(readxl)
+
+my_data <- read_xlsx(here("data","ES193DS_personal_data.xlsx"), sheet = "Sheet1")
+my_data_clean <- my_data %>%
+  clean_names()
+
+```
+
+# Problem 1. Personal Data
+
+## a.
+
+
+```{r}
+
+ggplot(my_data_clean,
+       aes(x = sleep_hrs, y = steps)) +
+  geom_point() +
+  labs(
+    title = "Scatter plot of number of steps vs hours of sleep taken in a day",
+    x = "hours of sleep",
+    y = "steps") + 
+  theme_minimal()
+
+ggplot(my_data_clean, aes(sample = sleep_hrs)) +
+  stat_qq() +
+  stat_qq_line(color = "pink") +
+  labs(title = "QQ plot of hours of sleep") +
+  theme_minimal()
+
+
+my_data_clean$column_8 <- weekday(as.Date(my_data$date))
+
+# Step 3: Order weekdays for proper display
+my_data$weekday <- factor(my_data$weekday,
+  levels = c("Monday", "Tuesday", "Wednesday", "Thursday", 
+             "Friday", "Saturday", "Sunday"))
+
+# Step 4: Group by weekday and sum steps
+steps_per_day <- my_data %>%
+  group_by(weekday) %>%
+  summarise(total_steps = sum(steps, na.rm = TRUE))
+
+# Step 5: Plot as a bar plot (aka "histogram with 1 bin per day")
+ggplot(steps_per_day, aes(x = weekday, y = total_steps)) +
+  geom_col(fill = "steelblue", color = "black") +
+  labs(
+    title = "Total Steps per Day of the Week",
+    x = "Day of the Week",
+    y = "Total Steps"
+  ) +
+  theme_minimal()
+
+```
+
