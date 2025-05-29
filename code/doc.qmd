@@ -29,40 +29,34 @@ my_data_clean <- my_data %>%
 
 ## a.
 
+
+
+## b. 
+
 ```{r}
 
-ggplot(my_data_clean,
-       aes(x = sleep_hrs, y = steps)) +
-  geom_point() +
-  labs(
-    title = "Scatter plot of number of steps vs hours of sleep taken in a day",
-    x = "hours of sleep",
-    y = "steps") + 
-  theme_minimal()
-
-ggplot(my_data_clean, aes(sample = sleep_hrs)) +
-  stat_qq() +
-  stat_qq_line(color = "pink") +
-  labs(title = "QQ plot of hours of sleep") +
-  theme_minimal()
-
-
-my_data_clean$weekday <- factor(my_data_clean$weekday, 
-  levels = c("Monday", "Tuesday", "Wednesday", "Thursday", 
-             "Friday", "Saturday", "Sunday"))
-
-steps_per_day <- my_data_clean %>%
-  group_by(weekday) %>%
-  summarise(total_steps = sum(steps, na.rm = TRUE))
-
-ggplot(steps_per_day, aes(x = weekday, y = total_steps)) +
-  geom_col(fill = "steelblue", color = "black") +
-  labs(
-    title = "Total Steps per Day of the Week",
-    x = "Day of the Week",
-    y = "Total Steps"
-  ) +
-  theme_minimal()
+ggplot(data = my_data_clean, 
+       aes(x = transportation_mode, # x-axis
+           y = sleep_hrs, # y-axis
+           color = transportation_mode)) + # fill geoms by transportation mode
+  
+  geom_boxplot(color = "darkgrey", 
+               outliers = FALSE) + # taking out outliers
+  
+  geom_jitter(height = 0, # create jitter points and adjust their size, width, adn opacity
+              width = 0.1,
+              size = 2,
+              alpha = 0.6) + # data points set to 60% opacity
+  
+  scale_color_manual(values = c("firebrick4", "orange", "forestgreen")) + # set custom colors
+  
+  theme_minimal() + # minimal theme
+  labs(title = str_wrap("Boxplot comparing hours of sleep versus mode of transportation used in a day", width = 60), #wrap title so it doesn't get cut off
+       x = "Mode of transportation", # title x axis
+       y = "Hours slept") + # title y axis
+  
+  theme(legend.position = "none") + # take out the legend
+  theme(plot.title = element_text(hjust = 0.5)) # center the title
 
 ```
 
@@ -83,3 +77,5 @@ The authors clearly articulated the general results of their experiments using t
 The authors eliminated any "visual clutter" by opting for a simple and effective box and whisker plot which entirely removes any individual data points. I would say that the figure also has a high data:ink ratio where nearly all visual elements contribute to communicating data.
 
 ## d.
+
+For this box plot, I would recommend some more interesting colors for the actual box plots to invite the viewer and make it more visually appealing. I would also include some outliers to the box plots for a more detailed data spread representation. Personally, I also like when the grid lines are visible, even if faint, to make it easier to connect the box plot data to the y axis. The graph is also missing a title which is necessary to quickly refer to each table and provide a brief summary of the graph contents.
