@@ -8,4 +8,4 @@ To visualize the data results, I used:
 - a jittered box plot graph to represent the underlying data when comparing sleep in hours by mode of transporttation in a day
 - a summary table sharing the median, quartiles, minimum, and maximum calculated using the data
 
-  
+rendered html link: file:///Users/chloe/Documents/ES_193DS/GIT/ES193DS_homework-03/envs193ds_homework_03.html
