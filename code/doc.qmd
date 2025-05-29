@@ -63,7 +63,7 @@ ggplot(data = my_data_clean,
 
 caption: jittered box plots comparing number of hours slept based on the mode of transportation used in a day (bike, bus, or walking). Each box summarizes the distribution of sleep hours for each transportation mode. The individual data points representing teh amount of hours slept in one day are jittered and offset to improve visibility.
 
-## d. 
+## d.
 
 ```{r}
 
@@ -90,6 +90,21 @@ summary_table %>% # create a summary table
 
 ```
 
+# Problem 2. Affective Visualization
+
+## a.
+
+The affective data visualization I'm imagining for my data is incorporating the boxplots into some sort of abstract drawing. I was thinking of making a collage but couldn't find the right pictures in the magazines I have at home. I could represent the box plots and connect them to drawings I'll make of the different modes of transportation I am analyzing. By using seperate colors for each mod of transportation hopefully the connection to each drawing will be made clearer and more aesthetically pleasing than the simple box plots I made in R.
+
+## b.
+
+![](images/draft1.pdf)
+
+## c.
+
+![](images/draft2.jpg)
+
+## d.
 
 # Problem 3. Statistical Critique
 
