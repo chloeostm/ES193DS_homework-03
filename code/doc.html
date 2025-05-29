@@ -86,14 +86,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#a." id="toc-a." class="nav-link" data-scroll-target="#a.">a.</a></li>
   <li><a href="#b." id="toc-b." class="nav-link" data-scroll-target="#b.">b.</a></li>
   <li><a href="#c." id="toc-c." class="nav-link" data-scroll-target="#c.">c.</a></li>
-  <li><a href="#d." id="toc-d." class="nav-link" data-scroll-target="#d.">d.&nbsp;</a></li>
+  <li><a href="#d." id="toc-d." class="nav-link" data-scroll-target="#d.">d.</a></li>
   </ul></li>
-  <li><a href="#problem-3.-statistical-critique" id="toc-problem-3.-statistical-critique" class="nav-link" data-scroll-target="#problem-3.-statistical-critique">Problem 3. Statistical Critique</a>
+  <li><a href="#problem-2.-affective-visualization" id="toc-problem-2.-affective-visualization" class="nav-link" data-scroll-target="#problem-2.-affective-visualization">Problem 2. Affective Visualization</a>
   <ul class="collapse">
   <li><a href="#a.-1" id="toc-a.-1" class="nav-link" data-scroll-target="#a.-1">a.</a></li>
   <li><a href="#b.-1" id="toc-b.-1" class="nav-link" data-scroll-target="#b.-1">b.</a></li>
   <li><a href="#c.-1" id="toc-c.-1" class="nav-link" data-scroll-target="#c.-1">c.</a></li>
   <li><a href="#d.-1" id="toc-d.-1" class="nav-link" data-scroll-target="#d.-1">d.</a></li>
+  </ul></li>
+  <li><a href="#problem-3.-statistical-critique" id="toc-problem-3.-statistical-critique" class="nav-link" data-scroll-target="#problem-3.-statistical-critique">Problem 3. Statistical Critique</a>
+  <ul class="collapse">
+  <li><a href="#a.-2" id="toc-a.-2" class="nav-link" data-scroll-target="#a.-2">a.</a></li>
+  <li><a href="#b.-2" id="toc-b.-2" class="nav-link" data-scroll-target="#b.-2">b.</a></li>
+  <li><a href="#c.-2" id="toc-c.-2" class="nav-link" data-scroll-target="#c.-2">c.</a></li>
+  <li><a href="#d.-2" id="toc-d.-2" class="nav-link" data-scroll-target="#d.-2">d.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -213,7 +220,7 @@ The following objects are masked from 'package:stats':
 <p>caption: jittered box plots comparing number of hours slept based on the mode of transportation used in a day (bike, bus, or walking). Each box summarizes the distribution of sleep hours for each transportation mode. The individual data points representing teh amount of hours slept in one day are jittered and offset to improve visibility.</p>
 </section>
 <section id="d." class="level2">
-<h2 class="anchored" data-anchor-id="d.">d.&nbsp;</h2>
+<h2 class="anchored" data-anchor-id="d.">d.</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> my_data_clean <span class="sc">%&gt;%</span> <span class="co"># use my_data_clean</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(transportation_mode) <span class="sc">%&gt;%</span> <span class="co"># group by transportation mode</span></span>
@@ -236,23 +243,23 @@ The following objects are masked from 'package:stats':
 <span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Summary of Sleep Hours by Transportation Mode"</span> <span class="co"># create a title</span></span>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="eixhnibout" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eixhnibout table {
+<div id="dnsqntjnpp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dnsqntjnpp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eixhnibout thead, #eixhnibout tbody, #eixhnibout tfoot, #eixhnibout tr, #eixhnibout td, #eixhnibout th {
+#dnsqntjnpp thead, #dnsqntjnpp tbody, #dnsqntjnpp tfoot, #dnsqntjnpp tr, #dnsqntjnpp td, #dnsqntjnpp th {
   border-style: none;
 }
 
-#eixhnibout p {
+#dnsqntjnpp p {
   margin: 0;
   padding: 0;
 }
 
-#eixhnibout .gt_table {
+#dnsqntjnpp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -278,12 +285,12 @@ The following objects are masked from 'package:stats':
   border-left-color: #D3D3D3;
 }
 
-#eixhnibout .gt_caption {
+#dnsqntjnpp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eixhnibout .gt_title {
+#dnsqntjnpp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -295,7 +302,7 @@ The following objects are masked from 'package:stats':
   border-bottom-width: 0;
 }
 
-#eixhnibout .gt_subtitle {
+#dnsqntjnpp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -307,7 +314,7 @@ The following objects are masked from 'package:stats':
   border-top-width: 0;
 }
 
-#eixhnibout .gt_heading {
+#dnsqntjnpp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -319,13 +326,13 @@ The following objects are masked from 'package:stats':
   border-right-color: #D3D3D3;
 }
 
-#eixhnibout .gt_bottom_border {
+#dnsqntjnpp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eixhnibout .gt_col_headings {
+#dnsqntjnpp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -340,7 +347,7 @@ The following objects are masked from 'package:stats':
   border-right-color: #D3D3D3;
 }
 
-#eixhnibout .gt_col_heading {
+#dnsqntjnpp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -360,7 +367,7 @@ The following objects are masked from 'package:stats':
   overflow-x: hidden;
 }
 
-#eixhnibout .gt_column_spanner_outer {
+#dnsqntjnpp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -372,15 +379,15 @@ The following objects are masked from 'package:stats':
   padding-right: 4px;
 }
 
-#eixhnibout .gt_column_spanner_outer:first-child {
+#dnsqntjnpp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eixhnibout .gt_column_spanner_outer:last-child {
+#dnsqntjnpp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eixhnibout .gt_column_spanner {
+#dnsqntjnpp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -392,11 +399,11 @@ The following objects are masked from 'package:stats':
   width: 100%;
 }
 
-#eixhnibout .gt_spanner_row {
+#dnsqntjnpp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eixhnibout .gt_group_heading {
+#dnsqntjnpp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,7 +429,7 @@ The following objects are masked from 'package:stats':
   text-align: left;
 }
 
-#eixhnibout .gt_empty_group_heading {
+#dnsqntjnpp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -437,15 +444,15 @@ The following objects are masked from 'package:stats':
   vertical-align: middle;
 }
 
-#eixhnibout .gt_from_md > :first-child {
+#dnsqntjnpp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eixhnibout .gt_from_md > :last-child {
+#dnsqntjnpp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eixhnibout .gt_row {
+#dnsqntjnpp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -464,7 +471,7 @@ The following objects are masked from 'package:stats':
   overflow-x: hidden;
 }
 
-#eixhnibout .gt_stub {
+#dnsqntjnpp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -477,7 +484,7 @@ The following objects are masked from 'package:stats':
   padding-right: 5px;
 }
 
-#eixhnibout .gt_stub_row_group {
+#dnsqntjnpp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -491,15 +498,15 @@ The following objects are masked from 'package:stats':
   vertical-align: top;
 }
 
-#eixhnibout .gt_row_group_first td {
+#dnsqntjnpp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eixhnibout .gt_row_group_first th {
+#dnsqntjnpp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eixhnibout .gt_summary_row {
+#dnsqntjnpp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -509,16 +516,16 @@ The following objects are masked from 'package:stats':
   padding-right: 5px;
 }
 
-#eixhnibout .gt_first_summary_row {
+#dnsqntjnpp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eixhnibout .gt_first_summary_row.thick {
+#dnsqntjnpp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eixhnibout .gt_last_summary_row {
+#dnsqntjnpp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -528,7 +535,7 @@ The following objects are masked from 'package:stats':
   border-bottom-color: #D3D3D3;
 }
 
-#eixhnibout .gt_grand_summary_row {
+#dnsqntjnpp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -538,7 +545,7 @@ The following objects are masked from 'package:stats':
   padding-right: 5px;
 }
 
-#eixhnibout .gt_first_grand_summary_row {
+#dnsqntjnpp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -548,7 +555,7 @@ The following objects are masked from 'package:stats':
   border-top-color: #D3D3D3;
 }
 
-#eixhnibout .gt_last_grand_summary_row_top {
+#dnsqntjnpp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -558,11 +565,11 @@ The following objects are masked from 'package:stats':
   border-bottom-color: #D3D3D3;
 }
 
-#eixhnibout .gt_striped {
+#dnsqntjnpp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eixhnibout .gt_table_body {
+#dnsqntjnpp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -571,7 +578,7 @@ The following objects are masked from 'package:stats':
   border-bottom-color: #D3D3D3;
 }
 
-#eixhnibout .gt_footnotes {
+#dnsqntjnpp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -585,7 +592,7 @@ The following objects are masked from 'package:stats':
   border-right-color: #D3D3D3;
 }
 
-#eixhnibout .gt_footnote {
+#dnsqntjnpp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -594,7 +601,7 @@ The following objects are masked from 'package:stats':
   padding-right: 5px;
 }
 
-#eixhnibout .gt_sourcenotes {
+#dnsqntjnpp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -608,7 +615,7 @@ The following objects are masked from 'package:stats':
   border-right-color: #D3D3D3;
 }
 
-#eixhnibout .gt_sourcenote {
+#dnsqntjnpp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -616,72 +623,72 @@ The following objects are masked from 'package:stats':
   padding-right: 5px;
 }
 
-#eixhnibout .gt_left {
+#dnsqntjnpp .gt_left {
   text-align: left;
 }
 
-#eixhnibout .gt_center {
+#dnsqntjnpp .gt_center {
   text-align: center;
 }
 
-#eixhnibout .gt_right {
+#dnsqntjnpp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eixhnibout .gt_font_normal {
+#dnsqntjnpp .gt_font_normal {
   font-weight: normal;
 }
 
-#eixhnibout .gt_font_bold {
+#dnsqntjnpp .gt_font_bold {
   font-weight: bold;
 }
 
-#eixhnibout .gt_font_italic {
+#dnsqntjnpp .gt_font_italic {
   font-style: italic;
 }
 
-#eixhnibout .gt_super {
+#dnsqntjnpp .gt_super {
   font-size: 65%;
 }
 
-#eixhnibout .gt_footnote_marks {
+#dnsqntjnpp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eixhnibout .gt_asterisk {
+#dnsqntjnpp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eixhnibout .gt_indent_1 {
+#dnsqntjnpp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eixhnibout .gt_indent_2 {
+#dnsqntjnpp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eixhnibout .gt_indent_3 {
+#dnsqntjnpp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eixhnibout .gt_indent_4 {
+#dnsqntjnpp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eixhnibout .gt_indent_5 {
+#dnsqntjnpp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eixhnibout .katex-display {
+#dnsqntjnpp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eixhnibout div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dnsqntjnpp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -733,24 +740,43 @@ The following objects are masked from 'package:stats':
 </div>
 </section>
 </section>
-<section id="problem-3.-statistical-critique" class="level1">
-<h1>Problem 3. Statistical Critique</h1>
+<section id="problem-2.-affective-visualization" class="level1">
+<h1>Problem 2. Affective Visualization</h1>
 <section id="a.-1" class="level2">
 <h2 class="anchored" data-anchor-id="a.-1">a.</h2>
+<p>The affective data visualization I’m imagining for my data is incorporating the boxplots into some sort of abstract drawing. I was thinking of making a collage but couldn’t find the right pictures in the magazines I have at home. I could represent the box plots and connect them to drawings I’ll make of the different modes of transportation I am analyzing. By using seperate colors for each mod of transportation hopefully the connection to each drawing will be made clearer and more aesthetically pleasing than the simple box plots I made in R.</p>
+</section>
+<section id="b.-1" class="level2">
+<h2 class="anchored" data-anchor-id="b.-1">b.</h2>
+<p><embed src="images/draft1-01.pdf" class="img-fluid"></p>
+</section>
+<section id="c.-1" class="level2">
+<h2 class="anchored" data-anchor-id="c.-1">c.</h2>
+<p><img src="images/draft2.jpg" class="img-fluid"></p>
+</section>
+<section id="d.-1" class="level2">
+<h2 class="anchored" data-anchor-id="d.-1">d.</h2>
+<p>This piece depicts the results of my experiment where I calculated the hours of sleep i would get in a day depending on the mode of transportation used. To show this data, I decided to draw each trasnportation mode to make it more visually attractive and better make the connection to teh modes of transporattation. For this piece I was inspired by the work of Jill Pelto who is able to beautifully connect drawing to data in a very fluid manner. I created this work on my ipad using digital art to draw all of the figures and lines. My creative process involved first drawing out a draft after playing around with the placement of the different elements, I then added the boxplots, making sure they remained proportional to each other. My last touch was to add the sleepy little figures inside the box plots to elude to the fact that the data is of the hours slept in a day.</p>
+</section>
+</section>
+<section id="problem-3.-statistical-critique" class="level1">
+<h1>Problem 3. Statistical Critique</h1>
+<section id="a.-2" class="level2">
+<h2 class="anchored" data-anchor-id="a.-2">a.</h2>
 <p>https://link.springer.com/article/10.1007/s10265-018-1073-2</p>
 <p>In the article titled “Pollination features and floral volatiles of <em>Gymnospermium scipetarum</em> (Berberidaceae),” the authors investigate the co-evolution between angiosperms and pollinators and wonder just how dependent flowering plants have become on these insects. To answer this question, the authors recorded the amount of seeds produced by <em>Gymnospermium scipetarum</em> racemes following a pollinators exclusion experiment where the flowers are capped to prevent contact with pollinators. They used a control test where a raceme was left uncapped to compare the results of the pollinator exclusion experiment using a Mann_Whitney U test to determine whether the difference in seed set is significant or not. The authors visualize their results with the box plot below comparing the median and spread from of the “capped” and “uncapped’ results.</p>
 <p><img src="images/box-plot.png" class="img-fluid"></p>
 </section>
-<section id="b.-1" class="level2">
-<h2 class="anchored" data-anchor-id="b.-1">b.</h2>
+<section id="b.-2" class="level2">
+<h2 class="anchored" data-anchor-id="b.-2">b.</h2>
 <p>The authors clearly articulated the general results of their experiments using the box plots which help communicate the median, range and quartiles of the data which is appropriate for running a Mann-Whitney U test. The x and y axis are also appropriately named and clearly explain that experiment counted the amount of seeds produced in two separate groups: a capped group and a control group. However, the graph fails to show the mean, standard errors, individual data points and outliers, or model predictions which limits our view of the underlying data; instead the mean and standard deviations are communicated in the paragraph above.</p>
 </section>
-<section id="c.-1" class="level2">
-<h2 class="anchored" data-anchor-id="c.-1">c.</h2>
+<section id="c.-2" class="level2">
+<h2 class="anchored" data-anchor-id="c.-2">c.</h2>
 <p>The authors eliminated any “visual clutter” by opting for a simple and effective box and whisker plot which entirely removes any individual data points. I would say that the figure also has a high data:ink ratio where nearly all visual elements contribute to communicating data.</p>
 </section>
-<section id="d.-1" class="level2">
-<h2 class="anchored" data-anchor-id="d.-1">d.</h2>
+<section id="d.-2" class="level2">
+<h2 class="anchored" data-anchor-id="d.-2">d.</h2>
 <p>For this box plot, I would recommend some more interesting colors for the actual box plots to invite the viewer and make it more visually appealing. I would also include some outliers to the box plots for a more detailed data spread representation. Personally, I also like when the grid lines are visible, even if faint, to make it easier to connect the box plot data to the y axis. The graph is also missing a title which is necessary to quickly refer to each table and provide a brief summary of the graph contents.</p>
 </section>
 </section>

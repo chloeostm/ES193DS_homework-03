@@ -98,13 +98,15 @@ The affective data visualization I'm imagining for my data is incorporating the 
 
 ## b.
 
-![](images/draft1.pdf)
+![](images/draft1-01.pdf)
 
 ## c.
 
 ![](images/draft2.jpg)
 
 ## d.
+
+This piece depicts the results of my experiment where I calculated the hours of sleep i would get in a day depending on the mode of transportation used. To show this data, I decided to draw each trasnportation mode to make it more visually attractive and better make the connection to teh modes of transporattation. For this piece I was inspired by the work of Jill Pelto who is able to beautifully connect drawing to data in a very fluid manner. I created this work on my ipad using digital art to draw all of the figures and lines. My creative process involved first drawing out a draft after playing around with the placement of the different elements, I then added the boxplots, making sure they remained proportional to each other. My last touch was to add the sleepy little figures inside the box plots to elude to the fact that the data is of the hours slept in a day.
 
 # Problem 3. Statistical Critique
 
