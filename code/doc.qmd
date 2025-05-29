@@ -1,6 +1,12 @@
 ---
-title: "doc"
-format: html
+title: "envs193ds_homework_03"
+author: "Chloe Ostermann"
+date: "2025-05-28"
+format: 
+  html: 
+    toc: true
+    toc-float: true
+    toc-location: left
 ---
 
 ```{r}
@@ -23,7 +29,6 @@ my_data_clean <- my_data %>%
 
 ## a.
 
-
 ```{r}
 
 ggplot(my_data_clean,
@@ -42,19 +47,14 @@ ggplot(my_data_clean, aes(sample = sleep_hrs)) +
   theme_minimal()
 
 
-my_data_clean$column_8 <- weekday(as.Date(my_data$date))
-
-# Step 3: Order weekdays for proper display
-my_data$weekday <- factor(my_data$weekday,
+my_data_clean$weekday <- factor(my_data_clean$weekday, 
   levels = c("Monday", "Tuesday", "Wednesday", "Thursday", 
              "Friday", "Saturday", "Sunday"))
 
-# Step 4: Group by weekday and sum steps
-steps_per_day <- my_data %>%
+steps_per_day <- my_data_clean %>%
   group_by(weekday) %>%
   summarise(total_steps = sum(steps, na.rm = TRUE))
 
-# Step 5: Plot as a bar plot (aka "histogram with 1 bin per day")
 ggplot(steps_per_day, aes(x = weekday, y = total_steps)) +
   geom_col(fill = "steelblue", color = "black") +
   labs(
@@ -66,3 +66,20 @@ ggplot(steps_per_day, aes(x = weekday, y = total_steps)) +
 
 ```
 
+# Problem 3. Statistical Critique
+
+## a.
+
+In the article titled "Pollination features and floral volatiles of *Gymnospermium scipetarum* (Berberidaceae)," the authors investigate the co-evolution between angiosperms and pollinators and wonder just how dependent flowering plants have become on these insects. To answer this question, the authors recorded the amount of seeds produced by *Gymnospermium scipetarum* racemes following a pollinators exclusion experiment where the flowers are capped to prevent contact with pollinators. They used a control test where a raceme was left uncapped to compare the results of the pollinator exclusion experiment using a Mann_Whitney U test to determine whether the difference in seed set is significant or not. The authors visualize their results with the box plot below comparing the median and spread from of the "capped" and "uncapped' results.
+
+![](images/box-plot.png)
+
+## b.
+
+The authors clearly articulated the general results of their experiments using the box plots which help communicate the median, range and quartiles of the data which is appropriate for running a Mann-Whitney U test. The x and y axis are also appropriately named and clearly explain that experiment counted the amount of seeds produced in two separate groups: a capped group and a control group. However, the graph fails to show the mean, standard errors, individual data points and outliers, or model predictions which limits our view of the underlying data; instead the mean and standard deviations are communicated in the paragraph above.
+
+## c.
+
+The authors eliminated any "visual clutter" by opting for a simple and effective box and whisker plot which entirely removes any individual data points. I would say that the figure also has a high data:ink ratio where nearly all visual elements contribute to communicating data.
+
+## d.
