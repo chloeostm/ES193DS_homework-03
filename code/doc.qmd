@@ -40,7 +40,7 @@ ggplot(data = my_data_clean,
            y = sleep_hrs, # y-axis
            color = transportation_mode)) + # fill geoms by transportation mode
   
-  geom_boxplot(color = "darkgrey") # create boxplots
+  geom_boxplot(color = "darkgrey") + # create boxplots
   
   geom_jitter(height = 0, # create jitter points and adjust their size, width, and opacity
               width = 0.1,
@@ -62,6 +62,33 @@ ggplot(data = my_data_clean,
 ## c.
 
 caption: jittered box plots comparing number of hours slept based on the mode of transportation used in a day (bike, bus, or walking). Each box summarizes the distribution of sleep hours for each transportation mode. The individual data points representing teh amount of hours slept in one day are jittered and offset to improve visibility.
+
+## d. 
+
+```{r}
+
+summary_table <- my_data_clean %>% # use my_data_clean
+  group_by(transportation_mode) %>% # group by transportation mode
+  rename("Mode of Transportation" = transportation_mode) %>% # rename column 1
+  summarise( # summarize data
+    Q1 = round(quantile(sleep_hrs, 0.25, na.rm = TRUE), 1), #calculate 1st quartile
+    Median = round(median(sleep_hrs, na.rm = TRUE), 1), # calculate median
+    Q3 = round(quantile(sleep_hrs, 0.75, na.rm = TRUE),1), # calculate third quartile
+    Min = round(min(sleep_hrs, na.rm = TRUE), 1), # calculate minimum value
+    Max = round(max(sleep_hrs, na.rm = TRUE), 1) # calculate maximum value
+  )
+
+summary_table %>% # create a summary table
+  gt() %>% # use gt
+  cols_align(
+    align = "center", # center info in the columns
+    columns = c(Q1, Median, Q3, Min, Max) # center all columns but the first column
+  ) %>%
+  tab_header( 
+    title = "Summary of Sleep Hours by Transportation Mode" # create a title
+  )
+
+```
 
 
 # Problem 3. Statistical Critique
